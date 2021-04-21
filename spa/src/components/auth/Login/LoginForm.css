@@ -1,0 +1,20 @@
+.form {
+    height: 400px;
+    width: 320px;
+}
+
+.form-subtitle {
+    margin-bottom: 0;
+    width: 90%;
+}
+
+.form-subtitle span {
+    display: block;
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+.form-subtitle a {
+    color: gray;
+    text-decoration: none;
+}

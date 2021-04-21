@@ -1,0 +1,6 @@
+.navigation-search-bar {
+    flex-basis: 20%;
+    display: flex;
+    max-height: 40px;
+    margin-top: 15px;
+}

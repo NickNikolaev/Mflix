@@ -1,0 +1,25 @@
+.form-fields {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-fields label {
+    width: 100%;
+    padding: 15px;
+}
+
+.form-fields label input {
+    width: 90%;
+    background: none;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+.form-fields i {
+    font-size: 20px;
+}

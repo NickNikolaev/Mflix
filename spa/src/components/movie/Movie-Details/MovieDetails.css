@@ -1,0 +1,109 @@
+.movie-details {
+    display: flex;
+    justify-content: space-around;
+    margin: 1% 8%;
+    color: white;
+}
+
+.movie-details-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-details-content-title {
+    font-size: 35px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 1%;
+}
+
+.movie-details-content-year {
+    padding: 8px 12px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 45%;
+}
+
+.movie-details-content-director {
+    margin-top: 2%;
+}
+
+.movie-details-content-director span {
+    padding: 5px 7px;
+    background-color: rgb(71, 71, 71);
+    color: rgb(76, 175, 80);
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.movie-details-content-runtime {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.movie-details-content-runtime span {
+    padding: 4px 6px;
+    background-color: rgba(213, 213, 213, 1);
+    color: black;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-top: -3px;
+}
+
+.movie-details-content-description {
+    width: 800px;
+    padding: 50px 40px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 8px;
+    word-wrap: break-word;
+}
+
+.movie-details-content-imdb-rating div {
+    width: 870px;
+    height: 20px;
+    background-color: rgb(54, 54, 54);
+    border-radius: 10px;
+}
+
+.movie-details-content-imdb-rating div span {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgb(76, 175, 80);
+}
+
+.movie-details-image-wrapper {
+    margin-top: 3%;
+}
+
+.movie-details-image-wrapper img {
+    width: 300px;
+    height: 500px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.movie-details-image-wrapper div {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+.movie-details-image-wrapper div button {
+    padding: 10px;
+    transition: background-color 0.1s ease;
+    color: white;
+    background-color: rgb(76, 175, 80);
+    border: none;
+    font-size: 18px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.movie-details-image-wrapper div button:hover {
+    background: none;
+}

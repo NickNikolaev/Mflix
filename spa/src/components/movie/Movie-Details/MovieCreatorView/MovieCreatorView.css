@@ -1,0 +1,31 @@
+.movie-details-creator {
+    width: 70%;
+    margin-top: 6%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.movie-details-creator a {
+    padding: 10px;
+    transition: background-color 0.1s ease;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.movie-details-creator-edit {
+    background-color: rgb(76, 175, 80);
+}
+
+.movie-details-creator-delete {
+    background-color: rgb(255 0 0 / 79%);
+}
+
+.movie-details-creator-edit:hover,
+.movie-details-creator-delete:hover {
+    background: none;
+}

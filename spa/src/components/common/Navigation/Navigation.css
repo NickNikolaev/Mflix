@@ -1,0 +1,33 @@
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+    border-bottom: 1px solid gray;
+}
+
+.navigation-title {
+    color: rgb(76, 175, 80);
+    font-size: 60px;
+    position: relative;
+    top: -10px;
+    text-decoration: none;
+}
+
+.navigation-user {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-user a {
+    background-color: rgb(58, 46, 46);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 15px 5px;
+    text-decoration: none;
+}
+
+.navigation-user a:hover {
+    background-color: black;
+}
