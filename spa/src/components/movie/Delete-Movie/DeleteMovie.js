@@ -1,5 +1,5 @@
-import { useDispatch } from 'react-redux';
-import { Redirect, useParams } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory, useParams } from 'react-router';
 import { useEffect } from 'react';
 
 import { deleteOneMovie } from '../../../actions/movie/delete/deleteMovieActions';
@@ -7,24 +7,32 @@ import { deleteOneMovieSuccess } from '../../../actions/movie/movieActionCreator
 import { showNotification } from '../../../actions/notification/notificationActionCreators';
 import { SUCCESSFULLY_DELETED_MOVIE } from '../../../services/notification-messages/movieNotificationMessages';
 import { HOME_ENDPOINT } from '../../../services/api/homeEndpoints';
+import { selectUser } from '../../../app/selectors';
 
 const DeleteMovie = () => {
-    const { movieId } = useParams();
     const dispatch = useDispatch();
+    const history = useHistory();
 
-    useEffect(async () => {
+    const { movieId } = useParams();
+    const { _id } = useSelector(selectUser);
+
+    useEffect(() => {
         // Delete One Movie
-        await deleteOneMovie(movieId);
+        deleteOneMovie(movieId, _id)
+            .then(() => {
+                // Dispatch Delete Movie Success Action
+                dispatch(deleteOneMovieSuccess());
 
-        // Dispatch Delete Movie Success Action
-        dispatch(deleteOneMovieSuccess());
+                // Show Notification
+                const notification = { type: 'success', message: SUCCESSFULLY_DELETED_MOVIE };
+                dispatch(showNotification(notification));
 
-        // Show Notification
-        const notification = { type: 'success', message: SUCCESSFULLY_DELETED_MOVIE };
-        dispatch(showNotification(notification));
+                // Redirect To Home Page
+                history.push(HOME_ENDPOINT);
+            });
     }, []);
 
-    return <Redirect to={HOME_ENDPOINT} />
+    return null;
 };
 
 export default DeleteMovie;

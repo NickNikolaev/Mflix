@@ -37,7 +37,7 @@ router.put('/:movieId/edit', (req, res) => {
 
 // Delete One
 router.delete('/:movieId/delete', (req, res) => {
-    deleteOne(req.params.movieId)
+    deleteOne(req.params.movieId, req.query.userId)
         .then(() => res.json({ success: true }))
         .catch(error => res.json({ error }));
 });

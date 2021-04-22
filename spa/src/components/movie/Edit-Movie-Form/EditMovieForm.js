@@ -8,15 +8,22 @@ import movieModel from '../../../models/movie/movieModel';
 
 import { fetchOne } from '../../../actions/movie/fetch/fetchMovieActions';
 import { editOneMovie } from '../../../actions/movie/edit/editMovieActions';
+import { useDispatch } from 'react-redux';
+import { fetchOneMovie } from '../../../actions/movie/movieActionCreators';
 
 const EditMovieForm = () => {
     const [inputFieldsElement, handleSubmit, setForm] = useFormManagement(movieModel, editOneMovie);
     const { movieId } = useParams();
+    const dispatch = useDispatch();
 
     useEffect(() => fetchOne(movieId)
         .then(movie => {
+            // Set Movie State
             const { title, year, director, runtime, description, imageUrl, imdb_rating } = movie;
             setForm({ title, year, director, runtime, description, imageUrl, imdb_rating });
+
+            // Dispatch Fetch One Movie Action
+            dispatch(fetchOneMovie(movie));
         }), []);
 
     return (

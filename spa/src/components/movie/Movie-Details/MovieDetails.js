@@ -11,7 +11,6 @@ import { redirect, formatRuntime, animateLoadingBar } from './helpers/movieDetai
 import determineMovieCreator from '../../../services/movie/determineMovieCreator';
 import { isMovieCreatorAction } from '../../../actions/auth/authActionCreators';
 import { selectUser } from '../../../app/selectors';
-
 import getAuthData from '../../../services/common/getAuthData';
 
 const MovieDetails = () => {
@@ -26,6 +25,7 @@ const MovieDetails = () => {
     useEffect(() =>
         fetchOne(movieId)
             .then(movie => {
+                debugger
                 // Set and Update Movie State
                 setMovie(movie);
                 dispatch(fetchOneMovie(movie));
