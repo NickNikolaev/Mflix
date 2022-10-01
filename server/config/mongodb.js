@@ -3,7 +3,7 @@ const { MongoClient } = require('mongodb');
 let db;
 
 const config = {
-    DB_URI: 'mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&ssl=false',
+    DB_URI: 'mongodb+srv://nikolanikolaev:Nikola01@servicetasks.gc4np.mongodb.net/?retryWrites=true&w=majority',
     DB_NAME: 'movies-spa',
     COLL_USERS: 'Users',
     COLL_MOVIES: 'Movies'

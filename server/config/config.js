@@ -1,5 +1,5 @@
 const config = {
-    PORT: 5000,
+    PORT: 4200,
     SALT_ROUNDS: 10,
 };
 
